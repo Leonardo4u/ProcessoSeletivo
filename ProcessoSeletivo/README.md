@@ -1,18 +1,44 @@
-## Getting Started
+<h1>Sistema de Processo Seletivo em Java</h1>
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+<h2>📌 Descrição</h2>
+    Este é um sistema básico de processo seletivo desenvolvido em Java. O programa simula a seleção de candidatos com base em seus pedidos salariais e realiza tentativas de contato para confirmar a contratação.
 
-## Folder Structure
 
-The workspace contains two folders by default, where:
+<h2>🚀 Funcionalidades</h2>
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+    Seleção de Candidatos: Seleciona candidatos com base no valor salarial pretendido.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+    Análise de Candidato: Verifica se o valor solicitado pelo candidato está dentro do orçamento definido.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+    Contato com Candidato: Simula tentativas de contato com o candidato para efetivar a contratação.
 
-## Dependency Management
+    Impressão de Lista de Selecionados: Exibe os candidatos aprovados no processo.
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+<h2>🏗️ Estrutura do Código</h2>
+
+<strong>selecaoCandidatos()</strong>: Realiza a seleção de candidatos com base no valor salarial pretendido.
+
+<strong>analisarCandidato(double salarioPretendido):</strong> Avalia se o candidato deve ser contatado de acordo com o salário base.
+
+<strong>valorPretendido():</strong> Retorna um valor aleatório para o salário pretendido.
+
+<strong>imprimirSelecionados():</strong> Exibe a lista de candidatos selecionados.
+
+<strong>entrandoEmContato(String candidato):</strong> Simula o contato com o candidato para tentar efetivar a contratação.
+
+<br>
+
+# 🛠️ Como Executar
+
+# Clone este repositório
+```bash
+git clone https://github.com/seu-repositorio.git
+
+# Acesse o diretório do projeto
+$ cd seu-repositorio
+
+# Compile o código-fonte Java
+$ javac candidatura/ProcessoSeletivo.java
+
+# Execute o programa
+$ java candidatura.ProcessoSeletivo
