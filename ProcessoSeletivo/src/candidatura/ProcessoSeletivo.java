@@ -8,42 +8,44 @@ public class ProcessoSeletivo {
     }
 
     static void imprimirSelecionados(){
-        imprimirSelecionados();
-        String [] candidatos = {"FELIPE", "MARCIA", "JULIA", "PAULO", "AUGUSTO", "MONICA", "FABRICIO", "MIRELA", "DANIELA"};
-        System.out.println("Imprimindo a lista de candidatos informando o indice do alemento");
+        String[] candidatos = {"FELIPE", "MARCIA", "JULIA", "PAULO", "AUGUSTO", "MONICA", "FABRICIO", "MIRELA", "DANIELA"};
+        System.out.println("Imprimindo a lista de candidatos informando o índice do elemento:");
 
-        for (int indice = 0; indice < candidatos.length; indice++){
+        for (int indice = 0; indice < candidatos.length; indice++) {
             System.out.println("O candidato de n° " + (indice+1) + " é o " + candidatos[indice] );
         }
-        for (String candidato: candidatos){
+        
+        for (String candidato: candidatos) {
             System.out.println("O candidato selecionado foi " + candidato);
         }
-
-        static void entrandoEmContato(String candidato){
-            int tentativasRealizadas 1;
-            boolean continuarTentando = true;
-            boolean atendeu = false;
-            do{
-                atendeu = atender();
-                continuarTentando = !atendeu;
-                if(continuarTentando)
-                    tentativasRealizadas++;
-                else
-                    System.out.println("Contato realizado com sucesso");
-
-            }while(continuarTentando && tentativasRealizadas < 3);
-            
-            if (atendeu){
-                System.out.println("Conseguimos contato com " + candidato + " na " + tentativasRealizadas + " tentativa");
-            else 
-                System.out.println("Não conseguimos contato com " + candidato +", numero maximo tentativas " + tentativasRealizadas);
-        }
-
-        static boolean atender(){
-            return new Random().nextInt(3) == 1;
-        }
-
     }
+
+    static void entrandoEmContato(String candidato) {
+        int tentativasRealizadas = 1;
+        boolean continuarTentando = true;
+        boolean atendeu = false;
+
+        do {
+            atendeu = atender();
+            continuarTentando = !atendeu;
+            if (continuarTentando)
+                tentativasRealizadas++;
+            else
+                System.out.println("Contato realizado com sucesso");
+
+        } while (continuarTentando && tentativasRealizadas < 3);
+
+        if (atendeu) {
+            System.out.println("Conseguimos contato com " + candidato + " na " + tentativasRealizadas + "ª tentativa");
+        } else {
+            System.out.println("Não conseguimos contato com " + candidato + ", número máximo de tentativas: " + tentativasRealizadas);
+        }
+    }
+
+    static boolean atender() {
+        return new Random().nextInt(3) == 1;
+    }
+
     static void selecaoCandidatos() {
         String[] candidatos = {"FELIPE", "MARCIA", "JULIA", "PAULO", "AUGUSTO", "MONICA", "FABRICIO", "MIRELA", "DANIELA"};
 
@@ -75,7 +77,7 @@ public class ProcessoSeletivo {
         if (salarioBase > salarioPretendido) {
             System.out.println("Ligar para o candidato.");
         } else if (salarioBase == salarioPretendido) {
-            System.out.println("Ligar para o candidato com uma contra proposta.");
+            System.out.println("Ligar para o candidato com uma contraproposta.");
         } else {
             System.out.println("Aguardando o resultado dos demais candidatos.");
         }
